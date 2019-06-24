@@ -29,8 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Database
 
-name : bd_constat_tfm
+name : 'bd_constat_tfm'
 
 ## Config 
 
-You have to change in proxy-config.json the path of your local server Apache for treating with PHP.
+You have to change in 'proxy-config.json' the path of your local server Apache for treating with PHP.
