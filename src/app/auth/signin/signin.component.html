@@ -1,0 +1,18 @@
+<div id="page">
+  <div class="container">
+    <img class="rounder-corners" width="200px" src="../../../assets/img/logo.png" alt="logo">
+    <form (ngSubmit)="onSignIn(s)" #s="ngForm">
+      <div class="form-group">
+        <input id="email" class="form-control form-control-lg" type="email" placeholder="email" name="email" ngModel
+               required email="true">
+      </div>
+      <div class="form-group">
+        <input id="password" class="form-control form-control-lg" type="password" placeholder="mot de passe"
+               name="password" ngModel required>
+      </div>
+      <button class="btn btn-primary btn-lg" type="submit" [disabled]="s.invalid">Connexion</button>
+    </form>
+    <p><a routerLink="#" routerLinkActive="active">Mot de passe oublié ?</a></p>
+    <p><a routerLink="/auth/signup" routerLinkActive="active">Vous ne disposez pas encore de compte ?</a></p>
+  </div>
+</div>

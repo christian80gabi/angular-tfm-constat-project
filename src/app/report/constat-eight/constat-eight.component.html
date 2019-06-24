@@ -1,0 +1,29 @@
+<div id="page">
+  <app-home-menu></app-home-menu>
+  <div class="container">
+    <h2>J'approuve le constat</h2>
+    <hr>
+    <p>Ici, vous allez revoir les informations entrées et les approuver par votre signature</p>
+    <div class="container-fluid">
+      <img src="../../../assets/img/constat-1.jpg" width="100" alt="joint report">
+      <button class="btn btn-outline-warning" routerLink="/constat/template">Consulter le constat</button>
+    </div>
+    <br>
+    <div class="container-fluid">
+      <p style="color: cornflowerblue;">J'approuve ce constat par ma signature</p>
+      <textarea class="form-control" id="signature" rows="5"></textarea>
+    </div>
+    <div class="container-fluid">
+      <div style="margin-top: 30px;">
+        <button style="margin-right: 10px;" type="button" class="btn btn-outline-danger btn-lg" (click)="onCancel()">
+          Annuler
+        </button>
+        <button type="button" class="btn btn-primary btn-lg" (click)="onNext()">Suivant</button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 91.74%" aria-valuenow="91.74" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>

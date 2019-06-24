@@ -1,0 +1,21 @@
+<div id="page">
+  <div class="container">
+    <h4 style="color: #145CAF; margin-top: 50px;">Ajouter un Véhicule</h4>
+    <form [formGroup]="vehicleForm" (ngSubmit)="onAddVehicle()">
+      <div class="form-group">
+        <input id="marque" class="form-control" type="text" placeholder="Marque" formControlName="mark">
+      </div>
+      <div class="form-group">
+        <label for="type">Type de véhicule</label>
+        <select id="type" class="form-control" formControlName="type">
+          <option value="1" selected>voiture</option>
+          <option value="2">moto</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input id="numMatricule" class="form-control" type="text" placeholder="Numéro de matricule" formControlName="matricule">
+      </div>
+      <button type="submit" class="btn btn-warning btn-lg" [disabled]="!vehicleForm.valid">Ajouter</button>
+    </form>
+  </div>
+</div>

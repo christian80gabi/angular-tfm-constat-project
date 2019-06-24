@@ -1,0 +1,62 @@
+<div id="page">
+  <app-home-menu></app-home-menu>
+  <div class="container">
+    <h2>Circonstances</h2>
+    <h5 style="color: #4D4D4D;">Sélectionnez selon la situation, les circonstances de l'accident vous concernant.</h5>
+    <div class="home-content">
+      <form (ngSubmit)="onNext(circonstances)" #circonstances="ngForm">
+        <div class="form-group">
+          <label style="color: #145CAF;" for="parking">Parking / Stationnement</label>
+          <select class="form-control" id="parking" name="parking" [ngModel]>
+            <optgroup label="parking">Parking</optgroup>
+            <option selected>En stationnement</option>
+            <option>Quittait un stationnement</option>
+            <option>Prenait un stationnement</option>
+            <option>Sortait d'un parking, d'un lieu privé, d'un chemin de terre</option>
+            <option>S'engageait dans un parking, un lieu privé, un chemin de terre</option>
+            <option></option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label style="color: #145CAF;" for="circulation">En Circulation</label>
+          <select class="form-control" id="circulation" name="circulation" [ngModel]>
+            <optgroup label="circulation">En Circulation</optgroup>
+            <option selected>Heurtait à l'arrière, en roulant dans le même sens et sur une même file</option>
+            <option>Roulait dans le même sens et sur une file différente</option>
+            <option>Changeait de file</option>
+            <option>Doublait</option>
+            <option>Arrêt de circulation</option>
+            <option>Virait à droite</option>
+            <option>Virait à gauche</option>
+            <option>Empiétait sur la partie de chaussée réservée à la circulation en sens inverse</option>
+            <option></option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label style="color: #145CAF;" for="croisement">Dans un Croisement</label>
+          <select class="form-control" id="croisement" name="croisement" [ngModel]>
+            <optgroup label="croisement">Dans un Croisement</optgroup>
+            <option selected>Venait de droite</option>
+            <option>Venait de gauche</option>
+            <option></option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label style="color: #145CAF;" for="manoeuvre">Dans une Manoeuvre</label>
+          <select class="form-control" id="manoeuvre" name="manoeuvre" [ngModel]>
+            <optgroup label="manoeuvre">Dans une Manoeuvre</optgroup>
+            <option selected>Reculait</option>
+            <option>N'avait pas observé le signal de priorité</option>
+            <option></option>
+          </select>
+        </div>
+
+        <button style="margin-right: 10px;" type="button" class="btn btn-outline-danger btn-lg" (click)="onCancel()">Annuler</button>
+        <button type="submit" class="btn btn-primary btn-lg">Suivant</button>
+      </form>
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 25.02%" aria-valuenow="25.02" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div id="page">
+  <app-home-menu></app-home-menu>
+  <div class="container">
+    <h2>Les dégâts</h2>
+    <h5 style="color: #4D4D4D;">Marquez d'une croix (<span> X </span>) l'emplacement des dégâts sur le véhicule</h5>
+    <button (click)="onCar()" [ngClass]="{'btn-success': car, 'btn': true}"><img src="../../../assets/img/car-choice.jpg" width=100></button>
+    <button (click)="onCar()" [ngClass]="{'btn-success': !car, 'btn': true}"><img src="../../../assets/img/bike-choice.jpeg" width=100></button>
+    <div *ngIf="car">
+      <app-car-draw></app-car-draw>
+    </div>
+    <div *ngIf="!car">
+      <app-moto-draw></app-moto-draw>
+    </div>
+  </div>
+  <br>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 50.04%" aria-valuenow="50.04" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>

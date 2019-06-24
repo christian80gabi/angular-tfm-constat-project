@@ -1,0 +1,24 @@
+<div id="page">
+  <div class="container">
+    <h4 style="color: #145CAF; margin-top: 50px;">Ajouter un Conducteur</h4>
+    <form [formGroup]="driverForm" (ngSubmit)="onAddDriver()">
+      <div class="form-group">
+        <input id="nom" class="form-control" type="text" placeholder="Nom" formControlName="nom">
+      </div>
+      <div class="form-group">
+        <input id="prenom" class="form-control" type="text" placeholder="Prenom" formControlName="prenom">
+      </div>
+      <div class="form-group">
+        <input id="adresse" class="form-control" type="text" placeholder="Adresse" formControlName="adresse">
+      </div>
+      <div class="form-group">
+        <input id="numPermis" class="form-control" type="text" placeholder="Numéro de permis de conduire" formControlName="numPermis">
+      </div>
+      <div class="form-group">
+        <label for="dateDelivrance">Date de Délivrance</label>
+        <input id="dateDelivrance" class="form-control" type="date" formControlName="dateDelivrance">
+      </div>
+      <button type="submit" class="btn btn-warning btn-lg" [disabled]="!driverForm.valid">Ajouter</button>
+    </form>
+  </div>
+</div>

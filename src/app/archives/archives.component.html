@@ -1,0 +1,11 @@
+<div id="page">
+  <app-home-menu></app-home-menu>
+  <div class="container">
+    <h2 style="margin-bottom: 30px;">Historique de vos constats</h2>
+    <div class="list-group">
+      <div class="list-group-item" *ngFor="let report of reports">
+        <h5 style="color: #4D4D4D;">Constat du : <span style="color: #145CAF;">{{report.accident_date}}</span> à <span style="color: #145CAF;"> {{report.accident_hour}}</span> prenant en parti <span style="color: #145CAF;">{{report.vehicles_number}}</span> véhicule(s) à <span style="color: #145CAF;">{{report.accident_place}}</span></h5>
+      </div>
+    </div>
+  </div>
+</div>

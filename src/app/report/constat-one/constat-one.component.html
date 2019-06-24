@@ -1,0 +1,19 @@
+<div id="page">
+  <app-home-menu></app-home-menu>
+  <div class="container">
+    <h2>Nombre de véhivules</h2>
+    <h5>Combien de véhicules est pris en compte dans l'accident ?</h5>
+    <div class="home-content">
+      <button class="btn btn-primary btn-lg btn-block" (click)="onOne()"><i class="far fa-user"></i> Un Véhicule</button>
+      <button class="btn btn-primary btn-lg btn-block" (click)="onTwo()"><i class="far fa-user"></i><i class="far fa-user"></i> Deux
+        Véhicules
+      </button>
+      <button class="btn btn-primary btn-lg btn-block" (click)="onMore()"><i class="far fa-user"></i><i class="far fa-user">+</i> Plus de
+        Deux Véhicules
+      </button>
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>

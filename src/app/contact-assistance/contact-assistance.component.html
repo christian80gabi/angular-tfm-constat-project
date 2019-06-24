@@ -1,0 +1,18 @@
+<div id="page">
+  <app-home-menu></app-home-menu>
+  <div class="container">
+    <h2>Contacter une assistance</h2>
+    <button class="btn btn-outline-success" style="margin-bottom: 20px; margin-top: 20px;">Ajouter Une Assistance</button>
+
+    <div class="list-group">
+    <div class="btn btn-outline-info" style="margin-bottom: 5px;" *ngFor="let assit of assistances">
+      <button class="btn btn-warning onLeft" (click)="onCall()"><i class="fas fa-phone-volume"></i></button>
+      <button class="btn btn-warning onLeft" (click)="onSendMyPosition()"><i class="fas fa-map-marker-alt"></i></button>
+      <p><b>{{assit.name_assist}}</b><span class="onRight"> +216 {{assit.tel_assist}} </span></p>
+      <br>
+      <button class="btn btn-secondary" style="align-self: center; margin-right: 5px;">Modifier</button>
+      <button class="btn btn-danger" style="align-self: center;">Supprimer</button>
+    </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div id="page">
+  <app-home-menu></app-home-menu>
+
+    <h5>Bienvenue {{ user.first_name_insured }}</h5>
+  <!--Page contents-->
+  <div class="container">
+    <div class="bd-example">
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../../assets/img/crash.jpg" class="size" alt="accident">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Un Accident</h5>
+              <p>Que Faire ?</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/img/constat-1.jpg" class="size" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color: #4D4D4D;">Un constat amiable</h5>
+              <p style="color: #4D4D4D;">un constat à l'amiable, c'est une bonne idée !</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/img/constat-2.jpg" class="size" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color: #4D4D4D;">Une Déclaration</h5>
+              <p style="color: #4D4D4D;">Afin de présenter les événements</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Précédent</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Suivant</span>
+        </a>
+      </div>
+    </div>
+    <div class="home-content">
+      <div class="alert-warning">
+        <p>Avez vous eu un accident ?</p>
+        <a class="btn btn-primary" routerLink="/constat/one" role="button">Remplir un Constat</a>
+      </div>
+      <div class="alert-warning">
+        <p>Besoin d'assistance automobile ?</p>
+        <a class="btn btn-primary" routerLink="/contact-assistance" role="button">Contacter une assitance</a>
+      </div>
+    </div>
+    <div align="center" class="home-content">
+      <a routerLink="/how-to-use" routerLinkActive="active"><u>condition d'utilisation</u></a>
+    </div>
+  </div>
+</div>

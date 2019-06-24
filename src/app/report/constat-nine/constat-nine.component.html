@@ -1,0 +1,45 @@
+<div id="page">
+  <app-home-menu></app-home-menu>
+  <div class="container">
+    <h2 style="color: #145CAF;">Félicitation, vous avez terminé votre constat !</h2>
+    <hr>
+  <form (ngSubmit)="onNext(end)" #end="ngForm">
+    <div class="container-fluid">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="agreed" id="agreed1" value="1" checked>
+        <label class="form-check-label" for="agreed1">J'approuve le contenu de ce
+          constat amiable </label>
+      </div>
+      <br><br>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="agreed" id="agreed0" value="0">
+        <label class="form-check-label" for="agreed0">Je n'approuve pas le contenu
+          de ce constat amiable </label>
+      </div>
+    </div>
+    <br><br>
+    <hr weight="12px" size="12px" width="50%">
+    <br><br>
+    <div class="container-fluid">
+      <p style="color: #145CAF;">Envoyer ce constat amiable</p>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="sent" id="sent1" value="1" checked>
+        <label class="form-check-label" for="sent1">à mon adresse mail uniquement </label>
+      </div>
+      <br><br>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="sent" id="sent0" value="0">
+        <label class="form-check-label" for="sent0">à mon adresse email et à mon
+          assureur</label>
+      </div>
+    </div>
+    <br>
+    <button style="margin-right: 10px;" type="button" class="btn btn-outline-danger btn-lg" (click)="onCancel()">Annuler</button>
+    <button type="submit" class="btn btn-primary btn-lg">Suivant</button>
+  </form>
+  </div>
+  <br>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>

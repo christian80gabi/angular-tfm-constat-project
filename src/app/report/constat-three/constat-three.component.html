@@ -1,0 +1,50 @@
+<div id="page">
+  <app-home-menu></app-home-menu>
+  <div class="container">
+    <h2>Choisir le concerné</h2>
+    <h5 style="color: #4D4D4D;">Choisissez un profil <span style="color: cadetblue;">ou bien</span> le conducteur et le véhicule impliqués dans l'accident.</h5>
+    <div class="home-content">
+
+      <form (ngSubmit)="onNext()" #profiles="ngForm">
+        <h4><label style="color: #145CAF;" for="driver">Quel profil ?</label></h4>
+        <div class="form-group">
+          <select class="form-control" id="profiles">
+            <option *ngFor="let driver of drivers; let i = index">
+              {{i}} {{ driver.first_name_driver }} {{ driver.last_name_driver }}
+            </option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Suivant</button>
+      </form>
+
+      <form (ngSubmit)="onNext()" #three="ngForm">
+
+        <div class="form-group">
+          <h4><label style="color: #145CAF;" for="driver">Qui conduisait ?</label></h4>
+          <select class="form-control" id="driver">
+            <option *ngFor="let driver of drivers; let i = index">
+              {{i}} {{ driver.first_name_driver }} {{ driver.last_name_driver }}
+            </option>
+          </select>
+        </div>
+        <p>S'il n'existe pas dans la liste, <a routerLink="/constat/three/driver-form">cliquez ici</a> pour l'ajouter</p>
+
+        <div class="form-group">
+          <h4><label style="color: #145CAF;" for="car">Quel Véhicule ?</label></h4>
+          <select class="form-control" id="car">
+            <option *ngFor="let vehicle of vehicles; let y = index">
+              {{y}} {{ vehicle.mark }}  [ {{ vehicle.matricule }} ]
+            </option>
+          </select>
+        </div>
+        <p>S'il n'existe pas dans la liste, <a routerLink="/constat/three/car-form">cliquez ici</a> pour l'ajouter</p>
+
+        <button style="margin-right: 10px;" type="button" class="btn btn-outline-danger btn-lg" (click)="onCancel()">Annuler</button>
+        <button type="submit" class="btn btn-primary btn-lg" [disabled]="three.invalid">Suivant</button>
+      </form>
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 16.68%" aria-valuenow="16.68" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>

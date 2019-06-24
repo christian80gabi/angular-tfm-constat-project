@@ -1,0 +1,23 @@
+<div id="page">
+    <div class="container">
+      <img class="rounder-corners" width="200px" src="../../../assets/img/logo.png" alt="logo">
+      <form [formGroup]="signUpForm" (ngSubmit)="onSubmitForm()">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Nom" formControlName="nom">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Prénom" formControlName="prenom">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Adresse Email" formControlName="email">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Mot de passe" formControlName="password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" [disabled]="signUpForm.invalid">
+          Confirmer
+        </button>
+        <p><a routerLink="/auth/signin" routerLinkActive="active">Vous disposez déjà un compte ?</a></p>
+      </form>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<!--Menu NavBar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 10px;">
+  <a class="navbar-brand" routerLink="/home">
+    <img src="../../assets/img/logo.png" width="100" height="60" alt="logo" class="d-inline-block align-content-center">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto my-2 my-lg-0">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/home"> Accueil</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/help"><i class="far fa-question-circle"></i> Besoin d'aide ?</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/archives"><i class="fas fa-archive"></i> Archive</a>
+      </li>
+      <li class="nav-item dropdown" routerLinkActive="active">
+        <a class="nav-link dropdown-toggle" href="#" id="profiles" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+          <i class="far fa-id-badge"></i> Profils
+        </a>
+        <div class="dropdown-menu" aria-labelledby="profiles">
+          <a class="dropdown-item" routerLink="/user/manage-profiles"> Gérer mes profils</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item alert-link" routerLink="/user/my-profiles"> Mes profils</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" routerLinkActive="active">
+        <a class="nav-link dropdown-toggle" href="#" id="accident" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false" style="color: coral;">
+          <i class="fas fa-car-crash"></i> Un accident ?
+        </a>
+        <div class="dropdown-menu" aria-labelledby="accident">
+          <a class="dropdown-item" routerLink="/contact-assistance"> Contacter une assistance</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item alert-link" routerLink="/constat/one"> Remplir un constat</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" routerLinkActive="active">
+        <a class="nav-link dropdown-toggle" href="#" id="information" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+          <i class="far fa-user"></i> Utilisateur
+        </a>
+        <div class="dropdown-menu" aria-labelledby="information">
+          <a class="dropdown-item" routerLink="/user/my-account">Modifier mes<br>informations</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item alert-link" (click)="onSignOut()">Deconnexion</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
